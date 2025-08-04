@@ -12,6 +12,7 @@ import random
 _x = []
 _y = []
 
+
 points = [[0, 0], [0, 0], [0, 0]]
 
 def resource_path(relative_path):
@@ -80,7 +81,7 @@ def end_game(new_window):
 
 def create_final_score_window():
     new_window = tk.Toplevel(window)
-    new_window.iconbitmap(Logo)
+    # new_window.iconbitmap(Logo)
     new_window.title("Final Score")
     score_supporting_label_final = tk.Label(new_window, text= "Final Score: ")
     score_label_final = tk.Label(new_window, textvariable=score)
@@ -104,7 +105,7 @@ def destroy_score_window(new_window):
 
 def create_score_window(score_value, parameters):
     new_window = tk.Toplevel(window)
-    new_window.iconbitmap(Logo)
+    # new_window.iconbitmap(Logo)
     new_window.title("Score")
     score_supporting_label_new = tk.Label(new_window, text="You scored: " + str(score_value))
     score_supporting_label_new.pack()
@@ -152,9 +153,9 @@ def clicked_guess_button():
 # TODO: implement multi-round with quit, interesting statistics? Ground-truth-solution?
 
 window = tk.Tk()
-window.iconbitmap(Logo)
+# window.iconbitmap(Logo)
 
-score = tk.DoubleVar(0.00)
+score = tk.DoubleVar(value = 0.00)
 round_counter = tk.IntVar(window, 1)
 
 window.title("ParabolaGuesser")
